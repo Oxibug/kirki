@@ -568,6 +568,12 @@ wp.customize.controlConstructor.repeater = wp.customize.Control.extend( {
 
 		if ( refresh ) {
 
+			/* 
+			 * Oxibug 
+			 * DO NOT Forget to add this in the [.min] file version
+			 */
+			OxibugKirkiRepeaterDependencies.init();
+			
 			// Trigger the change event on the hidden field so
 			// previewer refresh the website on Customizer
 			this.settingField.trigger( 'change' );
